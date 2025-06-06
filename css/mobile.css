@@ -18,12 +18,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  position: absolute;
+  position: fixed; /* ← clave para que quede fija */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1000;
+  backdrop-filter: blur(8px); /* opcional, da efecto elegante */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+
 
 .navbar-links {
   display: none; /* Oculto por defecto */
@@ -426,8 +429,8 @@ nav {
 
 
 .footer {
-  background-color: #8d8c8c;
-  border-top: 1px solid #ccc;
+  background-color: #071622;
+  border-top: 1px solid #f6f6f6;
   padding: 60px 20px;
   font-family: 'Georgia', serif;
 }
@@ -451,12 +454,12 @@ nav {
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #1f2c3b;
+  color: #3B4650;
 }
 
 .footer-block p {
   font-size: 1rem;
-  color: #333;
+  color: #9eb2c5;
   line-height: 1.6;
 }
 
