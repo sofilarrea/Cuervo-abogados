@@ -23,7 +23,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
- 
+
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -529,4 +529,31 @@ nav {
 
 .formulario-elegante button:hover {
   background-color: #2f3e50;
+}
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('/assets/tu-imagen.jpg') no-repeat center center/cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center; /* vertical */
+  justify-content: center; /* horizontal */
+  text-align: center;
+  padding: 0 20px;
+  background-color: rgba(0, 0, 0, 0.4); /* opcional para oscurecer fondo */
+}
+
+.hero-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
