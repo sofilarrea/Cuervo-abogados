@@ -133,7 +133,7 @@ nav {
 /* Wave */
 .container-wave {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   width: 100%;
   z-index: 1; /* Que esté entre el fondo y el contenido */
 }
@@ -378,7 +378,7 @@ nav {
 
 .contacto-obra {
   background:
-  linear-gradient(rgb(0 0 0 / 64%), rgb(0 0 0 / 52%)), url(/assets/obra1.jpg) no-repeat center center / cover;
+  linear-gradient(rgb(0 0 0 / 64%), rgb(0 0 0 / 52%)), url(/assets/obra2.jpg) no-repeat center center / cover;
   padding: 100px 20px;
   display: flex;
   justify-content: center;
