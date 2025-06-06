@@ -1,0 +1,7 @@
+/* Stylesheets */
+@import url('./mobile.css');
+@import url('./tablet.css') screen and (min-width: 768px);
+@import url('./desktop.css') screen and (min-width: 1024px);
+/* Fuente Gideon Roman */
+@import url('https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap');
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<header class="hero">
+  <nav id="navbar">
+    <div class="home">
+      <a href="#" class="h"><img src="/assets/logohd-1.png" alt="logo cuervo abogados" /></a>
+    </div>
+    <div class="menu-icon">
+      <a href="#navbar" class="open"><i class="fa-solid fa-bars" style="color: rgba(243, 233, 233, 0.659)"></i></a>
+      <a href="#" class="close"><i class="fa-solid fa-xmark" style="color: rgba(243, 233, 233, 0.659)"></i></a>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="contact.html">Contact Me</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <img src="/assets/logohd-1.png" alt="logo cuervo abogados" />
+    </div>
+  </div>
+
+  <div class="container-wave">
+    <svg id="wave" viewBox="0 0 1440 490" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+          <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+          <stop stop-color="rgba(255, 255, 255, 1)" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <path fill="url(#sw-gradient-0)" d="M0,343L720,441L1440,196L2160,294L2880,392L3600,392L4320,49L5040,0L5760,196L6480,294L7200,196L7920,98L8640,0L9360,343L10080,294L10800,196L11520,392L12240,245L12960,392L13680,98L14400,245L15120,245L15840,196L16560,0L17280,343L17280,490L0,490Z">
+      </path>
+    </svg>
+  </div>
+</header>
+
+<section class="la-firma">
+  <div class="contenedor-firma">
+    <h2>LA FIRMA</h2>
+    <p>Nuestro trabajo es nuestra pasión, y lo es desde hace casi setenta años.</p>
+    <p>Somos una firma de abogados situada en la Provincia de Mendoza, con lazos estratégicos en el país y en el exterior. Estamos orientados al asesoramiento integral de empresas y al abordaje de asuntos complejos, ofreciendo un servicio caracterizado por la calidad y el alto valor agregado de nuestras soluciones.</p>
+    <p>Nos distingue la honestidad, cercanía y compromiso con el cliente. Creemos en el ejercicio de la abogacía como una herramienta integrada a la gestión activa de las organizaciones.</p>
+  </div>
+</section>
+
+<section class="seccion-pico">
+  <div class="pico-blanco"></div>
+</section>
+
+<section class="especializacion-slider">
+  <h2>ÁREAS DE ESPECIALIZACIÓN</h2>
+  <div class="area-contenido">
+    <h3 id="area-titulo">Derecho Internacional Privado</h3>
+    <p id="area-descripcion">
+      Nos desarrollamos con solvencia en materia de contratación internacional, desarrollo de negocios, sucesiones, familia y demás aspectos del Derecho Internacional Privado, cuidando los intereses de nuestros clientes ante las diversas contingencias de su vida personal y patrimonial.
+    </p>
+  </div>
+  <div class="navegacion">
+    <button id="anterior">‹ Anterior</button>
+    <button id="siguiente">Siguiente ›</button>
+  </div>
+</section>
+
+<div class="pico-elegante"></div>
+
+<section class="contacto-obra">
+  <div class="form-container">
+    <h2 class="form-title">STAFF</h2>
+    <div class="staff-columns">
+      <div class="staff-column">
+        <h3>SOCIOS</h3>
+        <ul>
+          <li>Luis Horacio Cuervo</li>
+          <li>Rodrigo Cuervo</li>
+          <li>Juan Pablo García Diez</li>
+          <li>Lucas Andrés Cuervo</li>
+        </ul>
+      </div>
+      <div class="staff-column">
+        <h3>ASOCIADOS</h3>
+        <ul>
+          <li>Pablo Alberto De Bernardi</li>
+          <li>José Gabriel Sottile</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Formulario debajo -->
+  <form action="#" method="POST" class="formulario-elegante">
+    <div class="form-group">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+    </div>
+    <div class="form-group">
+      <input type="email" name="email" placeholder="E-mail" required>
+    </div>
+    <div class="form-group">
+      <input type="text" name="asunto" placeholder="Asunto" required>
+    </div>
+    <div class="form-group">
+      <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-block">
+      <h4>Dirección</h4>
+      <p>
+        Av. Perú 519 – (M5500FAF)<br />
+        Ciudad, Mendoza, Argentina.
+      </p>
+    </div>
+
+    <div class="footer-block">
+      <h4>Teléfono</h4>
+      <p>
+        Asesoramiento de empresas y personas:<br />
+        <strong>261 – 4250797</strong>
+      </p>
+    </div>
+
+    <div class="footer-block footer-ubicacion">
+      <a href="https://www.google.com/maps/place/Av.+Per%C3%BA+519,+M5500FAF+Mendoza,+Argentina"
+         target="_blank"
+         aria-label="Ver ubicación en Google Maps">
+        <img src="/assets/Mapa.png" alt="Ubicación Cuervo Abogados" />
+      </a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/549XXXXXXXXXX"
+   class="whatsapp-fijo"
+   target="_blank"
+   aria-label="Contactar por WhatsApp">
+  <img src="https://icongr.am/fontawesome/whatsapp.svg?size=55&color=25D366" alt="WhatsApp">
+</a>
+
+<script type="module" src="main.js"></script>
+<script src="/main.js"></script>
+
+</body>
+</html>

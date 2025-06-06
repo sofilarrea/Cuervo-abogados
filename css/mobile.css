@@ -1,0 +1,529 @@
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-one, Arial, sans-serif);
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Navbar base (mobile first) */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-links {
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(41, 57, 69, 0.9);
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.menu-icon {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Links */
+.home a,
+.navbar-links li a {
+  text-decoration: none;
+  color: var(--color-secundary, white);
+  font-family: var(--font-family-one, Arial, sans-serif);
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: 0.8;
+  letter-spacing: 1px;
+  transition: opacity 0.3s ease;
+}
+
+.home a:hover,
+.navbar-links li a:hover {
+  opacity: 1;
+}
+
+/* Menú abierto (cuando clickeas) */
+#navbar:target .navbar-links {
+  display: flex;
+}
+
+#navbar:target .open {
+  display: none;
+}
+
+#navbar:target .close {
+  display: block;
+}
+
+.close {
+  display: none;
+}
+
+/* Hero */
+/* Hero con fondo en ::before */
+.hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url('/assets/varriel-nizar-TU00tbHQkvg-unsplash.jpg') no-repeat center center/cover;
+  z-index: 0;
+  transform: scale(var(--zoom-scale, 1));
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+
+/* Logo navbar */
+.home a img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  z-index: 2; /* Asegura que esté sobre el fondo */
+  position: relative;
+}
+
+/* Logo central del hero */
+.hero-text img {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  z-index: 2; /* Mantiene el logo sobre el fondo */
+  position: relative;
+}
+
+/* Wave */
+.container-wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1; /* Que esté entre el fondo y el contenido */
+}
+
+.container-wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Navbar en pantallas grandes */
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    padding: 0;
+    width: auto;
+  }
+
+  .menu-icon {
+    display: none; /* Oculta el icono hamburguesa */
+  }
+  .container-wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 0;
+    z-index: 1;
+  }
+
+  .container-wave svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: -5px; /* Ajustá si necesitás subirlo más */
+  }
+}
+/* Si en mobile no se ve bien, agregamos esto */
+@media (max-width: 768px) {
+  .container-wave svg {
+    transform: scaleY(1.5); /* Aumenta un poco la altura en mobile */
+  }
+}
+
+.la-firma {
+  background-color: #ffffff;
+  color: #1f2c3b;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.contenedor-firma {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 21px;
+}
+
+.la-firma h2 {
+  font-family: 'Gideon Roman', serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.la-firma p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+  color: #333;
+  max-width: 700px;
+}
+
+
+/* .container-pico {
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url('/assets/obra.jpg') no-repeat center center/cover;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+ */
+ .seccion-pico {
+  background:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.045), rgba(0, 0, 0, 0.095)),
+    url('/assets/obra.jpg') no-repeat center center/cover;
+  height: 100vh; /* Ajustá altura */
+  position: relative;
+
+}
+
+/* Pico blanco */
+.pico-blanco {
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Ajustá la altura del pico */
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, 50% 100%); /* Triángulo */
+  z-index: 2;
+}
+
+
+
+.especializacion-slider {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #1f2c3b;
+}
+
+.especializacion-slider h2 {
+  font-family: 'Gideon Roman', serif;
+  font-size: 22px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.area-contenido {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.area-contenido i {
+  font-size: 36px;
+  color: #1f2c3b;
+  margin-bottom: 15px;
+}
+
+.area-contenido h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.area-contenido p {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.navegacion button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  color: #1f2c3b;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navegacion button:hover {
+  color: #444;
+}
+
+
+
+#three-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 10;
+}
+
+.text-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+
+
+.staff-section {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #222;
+}
+.staff-title {
+  font-family: 'Gideon Roman', serif;
+}
+
+
+.staff-columns {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.staff-column {
+  min-width: 250px;
+}
+
+.staff-column h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #2a2a2a;
+}
+
+.staff-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.staff-column li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+
+.contacto-obra {
+  background:
+  linear-gradient(rgb(0 0 0 / 64%), rgb(0 0 0 / 52%)), url(/assets/obra1.jpg) no-repeat center center / cover;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85); /* fondo semitransparente */
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.form-title {
+  font-family: 'Gideon Roman', serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #1f2c3b;
+  position: relative;
+}
+
+.whatsapp-fijo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 55px;
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-fijo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.whatsapp-fijo:hover {
+  transform: scale(1.1);
+}
+
+
+.footer {
+  background-color: #8d8c8c;
+  border-top: 1px solid #ccc;
+  padding: 60px 20px;
+  font-family: 'Georgia', serif;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: left;
+}
+
+.footer-block {
+  flex: 1 1 280px;
+}
+
+.footer-block h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1f2c3b;
+}
+
+.footer-block p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.footer-ubicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-ubicacion img {
+  max-width: 100px;
+  height: auto;
+  opacity: 0.9;
+}
+.pico-elegante {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.formulario-elegante {
+  max-width: 500px;
+  margin: 60px auto 0;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.formulario-elegante .form-group {
+  margin-bottom: 20px;
+}
+
+.formulario-elegante input,
+.formulario-elegante textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 4px;
+  background-color: #fefefe;
+  transition: border-color 0.3s;
+}
+
+.formulario-elegante input:focus,
+.formulario-elegante textarea:focus {
+  outline: none;
+  border-color: #1f2c3b;
+}
+
+.formulario-elegante button {
+  display: inline-block;
+  width: 100%;
+  background-color: #1f2c3b;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.formulario-elegante button:hover {
+  background-color: #2f3e50;
+}
