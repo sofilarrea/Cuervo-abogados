@@ -551,21 +551,22 @@ nav {
 }
 .hero-text h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.5rem;
+  font-size: 2.8rem; /* Agrandado */
   color: white;
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   letter-spacing: 0.5px;
+  max-width: 90%;
+  text-wrap: balance;
 }
 
 .hero-text h2 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem; /* Más chico para que entre en dos líneas */
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
-  line-height: 1.5;
-  max-width: 90%;
+  line-height: 1.6;
+  max-width: 80%;
   margin: 0 auto;
-  padding: 0 10px;
 }
