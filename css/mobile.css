@@ -557,13 +557,12 @@ nav {
   line-height: 1.2;
   margin-bottom: 18px;
   letter-spacing: 0.5px;
-  max-width: 90%;
   text-wrap: balance;
 }
 
 .hero-text h2 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.9rem; /* Más chico para que entre en dos líneas */
+  font-size: 1.4rem; /* Más chico para que entre en dos líneas */
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
