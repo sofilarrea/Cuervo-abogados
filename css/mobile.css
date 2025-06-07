@@ -549,11 +549,23 @@ nav {
   padding: 0 20px;
   background-color: rgba(0, 0, 0, 0.4); /* opcional para oscurecer fondo */
 }
-
-.hero-heading {
-  font-family: 'Gideon Roman', serif;
-  font-size: 3rem;
+.hero-text h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
   color: white;
   font-weight: 600;
-  letter-spacing: 1px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.hero-text h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 0 10px;
 }
