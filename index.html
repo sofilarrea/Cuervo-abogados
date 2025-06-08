@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Document</title>
+  <title>Cuervo Abogados</title>
+  <link rel="icon" type="image/png" href="/assets/isologo.jpg">
+
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -23,12 +25,14 @@
       <a href="#" class="close"><i class="fa-solid fa-xmark" style="color: rgba(243, 233, 233, 0.659)"></i></a>
     </div>
     <ul class="navbar-links">
-      <li><a href="contact.html">Contact Me</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="#la-firma">La Firma</a></li>
+      <li><a href="#socios">Socios</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#brochure">Brochure</a></li>
     </ul>
   </nav>
 
-  <div class="hero-content">
+  <div class="hero-content" data-bg="oscuro">
     <div class="hero-text">
       <!-- <img src="/assets/logohd-1.png" alt="logo cuervo abogados" /> -->
        <h1>Setenta años asesorando empresas</h1>
@@ -50,7 +54,7 @@
   </div>
 </header>
 
-<section class="la-firma">
+<section class="la-firma" id="la-firma"  data-bg="claro">
   <div class="contenedor-firma">
     <h2>LA FIRMA</h2>
     <p>Nuestro trabajo es nuestra pasión, y lo es desde hace casi setenta años.</p>
@@ -59,12 +63,12 @@
   </div>
 </section>
 
-<section class="seccion-pico">
+<section class="seccion-pico" data-bg="oscuro">
   <div class="pico-blanco"></div>
 </section>
 
-<section class="especializacion-slider">
-  <h2>ÁREAS DE ESPECIALIZACIÓN</h2>
+<section class="especializacion-slider" data-bg="claro">
+  <h2>ÁREAS DE PRÁCTICA</h2>
   <div class="area-contenido">
     <h3 id="area-titulo">Derecho Internacional Privado</h3>
     <p id="area-descripcion">
@@ -79,7 +83,7 @@
 
 <div class="pico-elegante"></div>
 
-<section class="contacto-obra">
+<section class="contacto-obra" id="socios" data-bg="oscuro">
   <div class="form-container">
     <h2 class="form-title">Socios</h2>
     <div class="staff-columns">
@@ -100,7 +104,7 @@
   </div>
 </section>
   <!-- Formulario debajo -->
-  <form action="#" method="POST" class="formulario-elegante">
+  <form action="#" method="POST" class="formulario-elegante" id="contacto">
     <div class="form-group">
       <input type="text" name="nombre" placeholder="Nombre completo" required>
     </div>

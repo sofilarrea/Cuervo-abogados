@@ -44,3 +44,28 @@ btnSiguiente.addEventListener('click', () => {
     const zoom = 1 + scrollY * 0.0004; // Ajustá el valor para más/menos zoom
     hero.style.setProperty('--zoom-scale', zoom);
   });
+  const navbar = document.querySelector('nav');
+  const sections = document.querySelectorAll('section[data-bg]');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bg = entry.target.getAttribute('data-bg');
+          if (bg === 'claro') {
+            navbar.classList.add('claro');
+            navbar.classList.remove('oscuro');
+          } else {
+            navbar.classList.add('oscuro');
+            navbar.classList.remove('claro');
+          }
+        }
+      });
+    },
+    {
+      rootMargin: '-60px 0px 0px 0px', // ajusta si tu navbar mide ~60px
+      threshold: 0.1
+    }
+  );
+
+  sections.forEach(section => observer.observe(section));
