@@ -23,7 +23,7 @@ nav {
   left: 0;
   width: 100%;
   z-index: 1000;
-
+  background-color: #02020259;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
@@ -125,13 +125,6 @@ nav {
 }
 
 /* Logo central del hero */
-.hero-text img {
-  width: 100%;
-  height: auto;
-  max-width: 400px;
-  z-index: 2; /* Mantiene el logo sobre el fondo */
-  position: relative;
-}
 
 /* Wave */
 .container-wave {
@@ -265,12 +258,6 @@ nav {
   margin: 0 auto 30px;
 }
 
-.area-contenido i {
-  font-size: 36px;
-  color: #1f2c3b;
-  margin-bottom: 15px;
-}
-
 .area-contenido h3 {
   font-size: 16px;
   margin-bottom: 10px;
@@ -307,45 +294,6 @@ nav {
 }
 
 
-
-#three-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-.overlay {
-  position: relative;
-  z-index: 10;
-}
-
-.text-section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-
-
-.staff-section {
-  background-color: #fff;
-  padding: 80px 20px;
-  text-align: center;
-  font-family: 'Georgia', serif;
-  color: #222;
-}
-.staff-title {
-  font-family: 'Gideon Roman', serif;
-}
-
-
 .staff-columns {
   display: flex;
   justify-content: center;
@@ -355,15 +303,6 @@ nav {
 
 .staff-column {
   min-width: 250px;
-}
-
-.staff-column h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  font-weight: normal;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #2a2a2a;
 }
 
 .staff-column ul {
@@ -580,16 +519,4 @@ nav {
 nav .navbar-links li a,
 nav .home a {
   transition: color 0.3s ease;
-}
-
-/* Fondo claro debajo → texto oscuro */
-nav.claro .navbar-links li a,
-nav.claro .home a {
-  color: #1f2c3b;
-}
-
-/* Fondo oscuro debajo → texto blanco */
-nav.oscuro .navbar-links li a,
-nav.oscuro .home a {
-  color: white;
 }
